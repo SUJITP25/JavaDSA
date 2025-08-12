@@ -24,10 +24,24 @@ public class Linkedlist {
         printRecursively(head.next);
     }
     
+    // Function go Print Reverse LinkedList Recursively
     public static void printReverseRecursively(Node head){
         if (head == null) return; 
         printReverseRecursively(head.next);
         System.out.println(head.data);
+    }
+
+    // find the length of the linkedlist 
+
+    public static int findLengthofLinkedList(Node head){
+        Node temp = head;
+        int count=0; 
+        while (temp != null){
+           count++;
+           temp = temp.next;
+        }
+        System.out.println(count);
+        return count;
     }
 
     public static void main(String[] args) {
@@ -42,7 +56,8 @@ public class Linkedlist {
         d.next = e;
         // printLinkedList(a);
         // printRecursively(a);
-        printReverseRecursively(a);
+        // printReverseRecursively(a);
+        // findLengthofLinkedList(a);
 
     }
 }
