@@ -12,9 +12,6 @@ public class Recursion {
         return lastDigit + digitSum(n/10);
     }
 
-    
-
-    
     public static void main(String[] args) {
         System.out.println(findFactorial(5));
         System.out.println(digitSum(125));
