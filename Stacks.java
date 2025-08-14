@@ -2,6 +2,21 @@ import java.util.Stack;
 
 public class Stacks {
     
+  public static void displayStackRecursively(Stack<Integer> st) {
+    if (st.isEmpty()) return;
+    int top = st.pop(); 
+    System.out.println(top); // print top first
+    displayStackRecursively(st); // recursive call to itself
+    st.push(top); // restore the stack
+}
+
+public static void displayReverseStackRecursively(Stack<Integer> st) {
+    if (st.isEmpty()) return;
+    int top = st.pop(); 
+    displayReverseStackRecursively(st); // first go deeper
+    System.out.println(top); // then print after returning
+    st.push(top); // restore the stack
+}
     public static void main(String[] args) {
         Stack <Integer> st = new Stack<>();
         st.push(1); 
@@ -17,6 +32,8 @@ public class Stacks {
         //     st.pop(); 
         //     System.out.println(st);
         // }
+
+
     
 
         // Question(2) : Copy the stack using 2 Arrays. 
@@ -41,26 +58,38 @@ public class Stacks {
         //     System.out.println(copyArr[i]);
         // }
 
-        // Question : Insert At Bottom
-        Stack <Integer> tempSt = new Stack<>();
+        
+        
+        
+        
+        // Question(3) : Insert 5 At Bottom
+        // Stack <Integer> tempSt = new Stack<>();
+        // while(st.size()>0){
+        //     int ele = st.pop(); 
+        //     tempSt.push(ele);
+        // }
 
-        while(st.size()>0){
-            int ele = st.pop(); 
-            tempSt.push(ele);
-        }
+        // System.out.println(st);
+        // System.out.println(tempSt);
 
-        System.out.println(st);
-        System.out.println(tempSt);
+        // st.push(5); 
 
-        st.push(5); 
+        // while(tempSt.size()>0){
+        //     int ele = tempSt.pop(); 
+        //     st.push(ele);
+        // }
 
-        while(tempSt.size()>0){
-            int ele = tempSt.pop(); 
-            st.push(ele);
-        }
+        // System.out.println(st);
+        // System.out.println(tempSt);
 
-        System.out.println(st);
-        System.out.println(tempSt);
+        displayStackRecursively(st);
+        displayReverseStackRecursively(st);
+        
+
+
+
+
+
 
 
 
