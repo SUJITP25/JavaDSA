@@ -20,6 +20,20 @@ public class Timespace {
         }
         // time complexity = o(logn)
 
+        for(int i=1; i<=n;i++){
+            for(int j=i;j<=i;j++){
+                
+            }
+        }
+        // i=1; j=1
+        // i=2; j=1,2
+        // i=3, j=1,2,3
+        // i=n , i=1,2,....n
+        // total operations = n(n+1)/2 = (n**2+n)/2
+        // Time complexity = o(n**2)
+        
+        
+      
         for (int i = 1; i <= n; i *= 2) {
             for (int j = 1; j <= i; j++) {
                 val = val + 1;
@@ -44,14 +58,13 @@ public class Timespace {
         // Time complexity = o(n*logn)
         // Because this timne j is not depending upon i that's why the
         // time complexity wlll be multiplies.
-
         // You multiply loop counts when both loops are independent.
         // You don’t multiply when loops are sequential, not nested.
-
         // Question : find the first Duplicate
 
-        int[] arr = { 1, 2, 3, 4, 5, 6, 4 };
 
+       // Approach 1 
+        int[] arr = { 1, 2, 3, 4, 5, 6, 4 };
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] == arr[j]) {
@@ -60,9 +73,9 @@ public class Timespace {
             }
         }
 
-        // approach2
+        // Approach2
         int s = arr.length;
-        boolean[] flag = new boolean[n + 1];
+        boolean[] flag = new boolean[s];
         for (int i = 0; i < s; i++) {
             int ele = arr[i];
             if (flag[ele] == true) {
@@ -71,6 +84,12 @@ public class Timespace {
                 flag[ele] = true;
             }
         }
+
+
+
+
+
+
 
     }
 }
@@ -85,5 +104,7 @@ public class Timespace {
 // Number of Operation - function of the Input
 // Asymptotic Analysis - No of Operation - Function Input - Analysis
 
-// Probems on Time Complexity
-//
+
+// Space Compelxiry and Auxilary Space
+// Auxilary space - Extra space taken to solve the problem 
+// 
