@@ -59,7 +59,7 @@ public class BinaryTree {
 
         // displayTree(root);
         // System.out.println(sizeOfBinaryTree(root));
-        preOrderTraversal(root);
+        // preOrderTraversal(root);
     }
 
 }
