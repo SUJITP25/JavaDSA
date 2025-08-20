@@ -75,6 +75,13 @@ public class Binarysearch {
         }
     }
 
+    // Leetcode 2529 - maximum Count of Positve Integer and Negative Integer. 
+    public static void maxOfPositiveNegative(int arr[]){
+
+    }
+
+    
+
     public static void main(String[] args) {
         int arr[] = { 1, 2, 3, 4, 5 };
         int target = 5;
